@@ -42,7 +42,7 @@ The network consists of:
 
 ### Topology Diagram
 
-![Enterprise network topology](Complete%20network%20topology.png)
+![Enterprise network topology](./Complete%20network%20topology.png)
 
 ### Department Distribution
 
@@ -140,23 +140,23 @@ The network was tested to verify connectivity, DHCP allocation, DNS resolution, 
 
 ### VLAN Verification
 
-![VLAN configuration on SW1](show%20vlan%20brief%20on%20SW1.png)
+![VLAN configuration on SW1](./show%20vlan%20brief%20on%20SW1.png)
 
 ### Trunk Verification
 
-![Trunk interfaces on SW1](show%20interfaces%20trunk%20on%20SW1.png)
+![Trunk interfaces on SW1](./show%20interfaces%20trunk%20on%20SW1.png)
 
 ### Router Interface Verification
 
-![Router interface status](show%20ip%20interface%20brief%20on%20R1.png)
+![Router interface status](./show%20ip%20interface%20brief%20on%20R1.png)
 
 ### DNS Resolution Test
 
-![Successful DNS ping from HR-01](Successful%20DNS%20ping%20from%20HR-01.png)
+![Successful DNS ping from HR-01](./Successful%20DNS%20ping%20from%20HR-01.png)
 
 ### ACL Verification
 
-![ACL match counters on R1](show%20access-lists%20on%20R1%2C%20showing%20match%20counters.png)
+![ACL match counters on R1](./show%20access-lists%20on%20R1%2C%20showing%20match%20counters.png)
 
 The `show access-lists` command confirmed that the configured ACL rules matched traffic.
 
@@ -188,8 +188,8 @@ All configured network services and security policies passed their respective te
 
 ## 7. Project Files
 
-- [Download the Cisco Packet Tracer simulation](Enterprise_Network_Design_VLAN_DHCP_DNS_ACL.pkt)
-- [View the topology image](Complete%20network%20topology.png)
+- [Download the Cisco Packet Tracer simulation](./Enterprise_Network_Design_VLAN_DHCP_DNS_ACL.pkt)
+- [View the topology image](./Complete%20network%20topology.png)
 
 Open the `.pkt` file using Cisco Packet Tracer to inspect and test the network.
 
