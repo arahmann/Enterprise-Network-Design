@@ -42,7 +42,7 @@ The network consists of:
 
 ### Topology Diagram
 
-![Enterprise network topology](./Complete%20network%20topology.png)
+![Enterprise network topology](<./Complete network topology.png>)
 
 ### Department Distribution
 
@@ -156,7 +156,7 @@ The network was tested to verify connectivity, DHCP allocation, DNS resolution, 
 
 ### ACL Verification
 
-![ACL match counters on R1](./show%20access-lists%20on%20R1%2C%20showing%20match%20counters.png)
+![ACL match counters on R1](<./show access-lists on R1, showing match counters.png>)
 
 The `show access-lists` command confirmed that the configured ACL rules matched traffic.
 
@@ -189,7 +189,7 @@ All configured network services and security policies passed their respective te
 ## 7. Project Files
 
 - [Download the Cisco Packet Tracer simulation](./Enterprise_Network_Design_VLAN_DHCP_DNS_ACL.pkt)
-- [View the topology image](./Complete%20network%20topology.png)
+- [View the topology image](<./Complete network topology.png>)
 
 Open the `.pkt` file using Cisco Packet Tracer to inspect and test the network.
 
