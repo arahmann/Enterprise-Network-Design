@@ -40,6 +40,10 @@ The network consists of:
 - 8 × PCs across four departments
 - 1 × Server providing DNS services
 
+### Topology Diagram
+
+![Enterprise network topology](Complete%20network%20topology.png)
+
 ### Department Distribution
 
 | Department | VLAN | Devices |
@@ -89,6 +93,7 @@ Configured DHCP on R1 with four separate address pools:
 The first ten addresses in each subnet were excluded from dynamic allocation to reserve addresses for gateways and infrastructure.
 
 Each DHCP pool distributes:
+
 - IP address
 - Subnet mask
 - Default gateway
@@ -133,6 +138,35 @@ The ACLs enforce department-level communication restrictions while preserving ac
 
 The network was tested to verify connectivity, DHCP allocation, DNS resolution, inter-VLAN routing, and ACL enforcement.
 
+### VLAN Verification
+
+![VLAN configuration on SW1](show%20vlan%20brief%20on%20SW1.png)
+
+### Trunk Verification
+
+![Trunk interfaces on SW1](show%20interfaces%20trunk%20on%20SW1.png)
+
+### Router Interface Verification
+
+![Router interface status](show%20ip%20interface%20brief%20on%20R1.png)
+
+### DNS Resolution Test
+
+![Successful DNS ping from HR-01](Successful%20DNS%20ping%20from%20HR-01.png)
+
+### ACL Verification
+
+![ACL match counters on R1](show%20access-lists%20on%20R1%2C%20showing%20match%20counters.png)
+
+The `show access-lists` command confirmed that the configured ACL rules matched traffic.
+
+Observed match counters:
+
+- HR → DNS Server: 9 matches
+- HR → Finance: 8 matches
+- Finance → DNS Server: 4 matches
+- Finance → HR: 10 matches
+
 ### Test Results
 
 | Test | Expected Result | Actual Result |
@@ -146,17 +180,6 @@ The network was tested to verify connectivity, DHCP allocation, DNS resolution, 
 | DNS hostname resolution | Successful | PASS |
 | DHCP address assignment | Successful | PASS |
 
-### ACL Verification
-
-The `show access-lists` command confirmed that the configured ACL rules matched traffic.
-
-Observed match counters:
-
-- HR → DNS Server: 9 matches
-- HR → Finance: 8 matches
-- Finance → DNS Server: 4 matches
-- Finance → HR: 10 matches
-
 ### Conclusion
 
 Successfully designed and implemented a segmented enterprise network with centralized routing, automated IP addressing, DNS resolution, and department-level access control.
@@ -165,8 +188,10 @@ All configured network services and security policies passed their respective te
 
 ## 7. Project Files
 
-- Enterprise_Network_Design_VLAN_DHCP_DNS_ACL.pkt — Cisco Packet Tracer simulation.
-- README.md — Project documentation.
+- [Download the Cisco Packet Tracer simulation](Enterprise_Network_Design_VLAN_DHCP_DNS_ACL.pkt)
+- [View the topology image](Complete%20network%20topology.png)
+
+Open the `.pkt` file using Cisco Packet Tracer to inspect and test the network.
 
 ## 8. Future Improvements
 
@@ -174,4 +199,3 @@ All configured network services and security policies passed their respective te
 - Configure a second router for high availability.
 - Add static routing or dynamic routing for additional network segments.
 - Implement additional security policies and monitoring.
-
